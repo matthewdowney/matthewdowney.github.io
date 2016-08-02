@@ -1,12 +1,22 @@
+---
+---
+
+$white: #ffffff;
+$black: #000000;
+$dark-grey: #6b6b6b;
+
+$color-main: #194775;
+$color-main-dark: #003366;
+
 /* Main page with stikky-footer
 -------------------------------------------------- */
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: $white;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid #27A822;
+  border-top: 3px solid $color-main;
 }
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -26,61 +36,61 @@ body {
   margin-bottom: 10px;
 }
 .navbar-default {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: $white;
+  border-color: $white;
 }
 .navbar-default .navbar-brand {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-text {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #6b6b6b;
-  background-color: #ffffff;
+  color: $dark-grey;
+  background-color: $white;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #6b6b6b;
-  background-color: #ffffff;
+  color: $dark-grey;
+  background-color: $white;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ffffff;
+  border-color: $white;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #ffffff;
+  background-color: $white;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #6b6b6b;
+  background-color: $dark-grey;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #6b6b6b;
+  border-color: $dark-grey;
 }
 .navbar-default .navbar-link {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 .navbar-default .navbar-link:hover {
-  color: #6b6b6b;
+  color: $dark-grey;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #6b6b6b;
+    color: $dark-grey;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #6b6b6b;
+    color: $dark-grey;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #6b6b6b;
-    background-color: #ffffff;
+    color: $dark-grey;
+    background-color: $white;
   }
 }
 
@@ -96,10 +106,10 @@ body {
   margin: 20px 0;
 }
 .container a {
-  color: #27A822;
+  color: $color-main;
 }
 .container a:hover {
-  color: #267723;
+  color: $color-main-dark;
 }
 .img-responsive {
  display: block;
@@ -120,10 +130,10 @@ body {
   font-size: 15px;
 }
 .panel-default h4 a, h5 a {
-  color: #27A822;
+  color: $color-main;
 }
 .panel-default h4 a:hover, h5 a:hover {
-  color: #267723;
+  color: $color-main-dark;
 }
 .panel{
   border-style: none;
@@ -137,7 +147,7 @@ body {
   word-spacing: 25px;
 }
 .social h4 > a {
-  color: #000000;
+  color: $black;
 }
 .avatar {
   padding-top: 5%;
@@ -174,10 +184,10 @@ body {
   text-decoration: none !important;
 }
 .text-muted {
-	color: #6b6b6b;
+	color: $dark-grey;
 }
 div.footer{
-  border-bottom: 5px solid #27A822;;
+  border-bottom: 5px solid $color-main;
 }
 /* Set the fixed height of the footer here */
 /*.footer {
