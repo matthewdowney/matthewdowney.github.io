@@ -9,7 +9,6 @@ gems: [jekyll-paginate]
 port: 3000
 safe: true
 
-# edit here to achieve your personal greatness
 url: http://matthewdowney.github.io/
 baseurl: /sustain/
 title: Matthew Downey
@@ -17,9 +16,9 @@ author: Matthew Downey
 description: Personal blog and resume
 avatar: profile.jpg
 email: matthewdowney20@gmail.com
-github: matthewdowney/matthewdowney.github.io # username
-#Comment out if you don't want disqus 
-disqus: username
+github: matthewdowney
+instagram: _matthewdowney
+disqus: matthewdowney
 google_analytics: UA-69391421-1
 
 # needed for travis-ci build
