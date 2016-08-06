@@ -3,7 +3,7 @@ layout: markdown
 title: Experience & Skills
 ---
 
-# Work Experience
+# **Work Experience**
 ### Sonar Trading
 ---
 Intern April 2015 – Present
@@ -48,7 +48,7 @@ Commissioned to build Windows desktop app to integrate with Outlook and scan ema
 - Compared contacts against third party database which lists hacked or compromised accounts from major leaks.
 - This was then used to notify clients whose accounts had been hacked.
 
-# Skills
+# **Skills**
 - Skilled in: Java, C, Python, Javascript.
 - Have worked in: C++, PHP, VB.NET, SQL, AutoIt.
 - In progress: Haskell.
