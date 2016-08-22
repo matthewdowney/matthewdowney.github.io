@@ -27,7 +27,7 @@ Hired to redesign website.
 - Migrated static HTML website to Jekyll generated site with templating & css.
 - [Before](/static/img/wsi-before.jpg) & [after](/static/img/wsi-after.jpg).
 
-### Data Design/Cisco Systems
+### Data Design
 ---
 Consultant January 2016
 
