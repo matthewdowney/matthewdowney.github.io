@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Experience & Skills
+title: Experience
 ---
 
 # **Work Experience**
@@ -27,6 +27,12 @@ Hired to redesign website.
 - Migrated static HTML website to Jekyll generated site with templating & css.
 - [Before](/static/img/wsi-before.jpg) & [after](/static/img/wsi-after.jpg).
 
+### Data Design/Cisco Systems
+---
+Consultant January 2016
+
+Consulted on software architecture & design.
+
 ### Houzng
 ---
 (Django) Web Developer March 2015 – June 2016
@@ -48,7 +54,3 @@ Commissioned to build Windows desktop app to integrate with Outlook and scan ema
 - Compared contacts against third party database which lists hacked or compromised accounts from major leaks.
 - This was then used to notify clients whose accounts had been hacked.
 
-# **Skills**
-- Skilled in: Java, C, Python, Javascript.
-- Have worked in: C++, PHP, VB.NET, SQL, AutoIt.
-- In progress: Haskell.
