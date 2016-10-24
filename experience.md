@@ -4,38 +4,27 @@ title: Experience
 ---
 
 # **Work Experience**
-### Sonar Trading
 ---
-Intern April 2015 – Present
+## Sonar Trading
+#####Software Engineer June 2016 — Present
+
+Development of algorithmic cryptocurrency trading system & integrated development platform on top of existing bitcoin & altcoin exchanges.
+
+- Developed market simulator which used archived market data with trading strategy logic to project profit & loss.
+- Developed trading GUI using [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm).
+- Wrote websocket clients to integrate Bitcoin exchange APIs with trading system.
+- Designed & implemented a platform on top of existing exchanges to ameliorate effects of inconsistent APIs, non-standard exchange trading practices, and fragmented functionality.
+
+#####Intern April 2015 – June 2016
 
 Development of algorithmic cryptocurrency trading system.
 
 - Designed, implemented and load/performance tested data transfer pattern for market signal calculation faster than that offered by Apache Storm.
 - Developed, tested, and executed live market trading algorithm on [Bitfinex](https://bitfinex.com/) based on common market indicators.
-- Worked in team of two to develop market simulator which used archived market data with trading strategy logic to project profit & loss.
-- Worked in team of two to develop trading GUI using [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm).
-- Wrote websocket clients to integrate Bitcoin exchange APIs with trading system.
 - Modified [timmolter/XChange](https://github.com/timmolter/XChange/) to integrate [bitcoin.de](https://bitcoin.de/) market data API.
 
-### Wilderness Skills Institute
----
-Web Developer June 2016
-
-Hired to redesign website.
-
-- Redesigned layout & color scheme.
-- Migrated static HTML website to Jekyll generated site with templating & css.
-- [Before](/static/img/wsi-before.jpg) & [after](/static/img/wsi-after.jpg).
-
-### Data Design
----
-Consultant January 2016
-
-Consulted on software architecture & design.
-
-### Houzng
----
-(Django) Web Developer March 2015 – June 2016
+## Houzng
+Django Developer March 2015 – June 2016
 
 Designed & managed web app development.
 
@@ -44,13 +33,20 @@ Designed & managed web app development.
 - Database in MySQL with user media storage in Amazon S3.
 - Wrote AWS lambda for images to video conversion.
 
-### Market Value Systems
+# **Consulting**
 ---
-Software Developer March 2014 – April 2014
 
-Commissioned to build Windows desktop app to integrate with Outlook and scan email addresses.
+## Wilderness Skills Institute
+June 2016
 
-- Used VB.NET to scan Outlook contacts.
-- Compared contacts against third party database which lists hacked or compromised accounts from major leaks.
-- This was then used to notify clients whose accounts had been hacked.
+Redesigned [existing website](http://wildernessskillsinstitute.com/).
 
+## Data Design
+January 2016
+
+Provided software architecture and design technical assessment for Fortune 500 client, identifying potential performance trouble spots for customized SalesForce.Com application with 20K global users.
+
+## Market Value Systems
+March 2014
+
+Built Windows desktop application to integrate with Microsoft Outlook & scan for hacked emails within a user's contacts.
