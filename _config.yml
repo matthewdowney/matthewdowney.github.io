@@ -1,5 +1,5 @@
 # top level stuff you probably don't need to touch
-highlighter: pygments
+#highlighter: pygments
 markdown: rdiscount
 rdiscount:
   extensions: [smart]
@@ -8,7 +8,6 @@ paginate: 5
 gems: [jekyll-paginate]
 port: 3000
 safe: true
-
 url: http://matthewdowney.github.io/
 #baseurl: /
 title: Matthew Downey
@@ -23,3 +22,10 @@ google_analytics: UA-69391421-1
 
 # needed for travis-ci build
 exclude: [vendor]
+
+# syntax highlighting
+syntax-highlighting:
+    enabled : true
+    css: syntax.css
+    #css: solarized-light.css
+
