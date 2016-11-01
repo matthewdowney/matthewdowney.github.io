@@ -94,6 +94,22 @@ body {
   }
 }
 
+/* For the experience page
+-------------------------------------------------- */
+span.where {
+    font-size: .8em;
+    font-style: italic;
+    color: darkgray;
+    border-left: 2px solid darkgray;
+    padding-left: .3em;
+    margin-left: .3em;
+    font-weight: 700;
+}
+
+span.where.small {
+    font-size: 50%;
+}
+
 /* Custom page CSS
 -------------------------------------------------- */
 
