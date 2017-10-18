@@ -29,3 +29,5 @@ syntax-highlighting:
     css: syntax.css
     #css: solarized-light.css
 
+plugins:
+  - jekyll-seo-tag
