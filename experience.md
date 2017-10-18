@@ -3,52 +3,63 @@ layout: markdown
 title: Experience
 ---
 
-# **Work Experience**
----
-## Sonar Trading
-#####Software Engineer June 2016 — Present <span class="where">Mexico City, Mexico</span>
+## Crypto & Blockchain Consultant <span class="text-light">@</span> Bank Frick
+<h5>September 2017 — Present <span class="where">Balzers, Liechtenstein</span></h5>
 
-Development of algorithmic cryptocurrency trading system & integrated development platform on top of existing bitcoin & altcoin exchanges.
-
-- Developed market simulator which used archived market data with trading strategy logic to project profit & loss.
-- Developed trading GUI using [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm).
-- Wrote websocket clients to integrate Bitcoin exchange APIs with trading system.
-- Designed & implemented a platform on top of existing exchanges to ameliorate effects of inconsistent APIs, non-standard exchange trading practices, and fragmented functionality.
-
-#####Intern April 2015 – June 2016 <span class="where">Santa Cruz, California</span>
-
-Development of algorithmic cryptocurrency trading system.
-
-- Designed, implemented and load/performance tested data transfer pattern for market signal calculation faster than that offered by Apache Storm.
-- Developed, tested, and executed live market trading algorithm on [Bitfinex](https://bitfinex.com/) based on common market indicators.
-- Modified [timmolter/XChange](https://github.com/timmolter/XChange/) to integrate [bitcoin.de](https://bitcoin.de/) market data API.
+Secure crypto wallet development, blockchain knowledge, client assesment.
 
 <br>
 
-## Houzng
-#####Django Developer March 2015 – June 2016 <span class="where">San Anselmo, California</span>
+## Co-founder & Head Engineer <span class="text-light">@</span> Sonar Trading
+<h5>April 2015 — September 2017 <span class="where">Mexico City, Mexico</span></h5>
 
-Designed & managed web app development.
+Development of high frequency trading system, integration with top cryptocurrency exchanges, and trading strategy development.
+
+- Architected & implemented exchange message processing system for generic market state replication. (Abstracting inconsistent & sometimes malfunctioning exchange APIs into a tradable platform.)
+- Wrote & deployed concurrent trading & order execution strategies.
+- Lead integration effort to connect as many exchanges as possible.
+- Found and resolved bugs internal to several exchanges & their APIs.
+
+<br>
+
+## Crypto & Blockchain Consultant <span class="text-light">@</span> Bank Frick
+<h5>January — February 2017 <span class="where">Balzers, Liechtenstein</span></h5>
+
+Strategic development for modernizing infrastructure, managing digital assets, and innovating services to be offered.
+
+- Wrote technical explanation of key technologies, white paper concerning bank's use cases.
+- Suggested key partnerships within the ecosystem.
+- Worked with management to understand opporunities within an acceptable risk tolerance while maintaining complete compliance.
+
+<br>
+
+## Web Dev <span class="text-light">@</span> Houzng
+<h5>March 2015 — June 2016 <span class="where">San Anselmo, California</span></h5>
+
+Web development.
 
 - Designed and built Django web application using HTML/CSS/SASS/JS/JQuery (and of course Python).
 - Integrated with social media APIs.
 - Database in MySQL with user media storage in Amazon S3.
 - Wrote AWS lambda for images to video conversion.
 
-# **Consulting**
----
+<br>
 
-## Wilderness Skills Institute <span class="where small">Santa Cruz, California</span>
-June 2016
+## Web Dev <span class="text-light">@</span> Wilderness Skills Institute
+<h5>June 2016 <span class="where">Santa Cruz, California</span></h5>
 
-Redesigned [existing website](http://wildernessskillsinstitute.com/).
+[Redesigned website](http://wildernessskillsinstitute.com/).
 
-## Data Design <span class="where small">San Jose, California</span>
-January 2016
+<br>
 
-Provided software architecture and design technical assessment for Fortune 500 client, identifying potential performance trouble spots for customized SalesForce.Com application with 20K global users.
+## Consultant <span class="text-light">@</span> Data Design
+<h5>January 2016 <span class="where">San Jose, California</span></h5>
 
-## Market Value Systems <span class="where small">Fairfax, California</span>
-March 2014
+Provided systems architecture and design technical consulting for Fortune 500 client, identifying potential performance trouble spots for customized SalesForce.Com application with 20K global users.
 
-Built Windows desktop application to integrate with Microsoft Outlook & scan for hacked emails within a user's contacts.
+<br>
+
+## Consultant <span class="text-light">@</span> Market Value Systems
+<h5>March 2014 <span class="where">Fairfax, California</span></h5>
+
+Developed application to integrate with Microsoft Outlook & automate scanning for hacked emails within a user's contacts.

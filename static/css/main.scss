@@ -97,17 +97,17 @@ body {
 /* For the experience page
 -------------------------------------------------- */
 span.where {
-    font-size: .8em;
-    font-style: italic;
+    font-size: .95em;
     color: darkgray;
-    border-left: 2px solid darkgray;
+    border-left: 1px solid darkgray;
     padding-left: .3em;
     margin-left: .3em;
-    font-weight: 700;
+    font-weight: 300;
 }
 
-span.where.small {
-    font-size: 50%;
+.text-light {
+    color: darkgray;
+    font-weight: 300;
 }
 
 /* Custom page CSS
