@@ -11,13 +11,13 @@ In Bitcoin, a public key is composed of its (x, y) coordinates on the secp256k1 
 
 The uncompressed serialization format is
 
-```
+```haskell
 04 [32 byte x vlaue] [32 byte y value]
 ```
 
 and the compressed format is
 
-```
+```haskell
 [03 if y is odd else 02] [32 byte x value]
 ```
 
