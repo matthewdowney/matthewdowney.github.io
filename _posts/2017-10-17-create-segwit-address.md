@@ -34,7 +34,7 @@ def hash160(x): # Both accepts & returns bytes
 
 Then we can define a function that accepts a **compressed** public key and generates the corresponding address. For simplicity I'll use the Base58 encoding provided in [bip32utils](https://github.com/prusnak/bip32utils).
 
-```bash
+```haskell
 $ pip install git+https://github.com/prusnak/bip32utils
 ```
 
