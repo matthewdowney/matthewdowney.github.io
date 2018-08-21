@@ -1,6 +1,6 @@
 ---
 layout: markdown
-title: Experience
+title: Work
 ---
 
 ## Crypto & Blockchain Consultant <span class="text-light">@</span> Bank Frick

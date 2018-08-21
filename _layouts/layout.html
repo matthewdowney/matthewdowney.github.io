@@ -9,7 +9,7 @@
     <link rel="favicon" href="{{ site.baseurl }}static/img/favicon.ico">
 
     {% if page.title %}
-      <title>{{ page.title }}</title>
+      <title>{{ page.title }} | {{ site.author }}</title>
     {% else %}
       <title>{{ site.title }}</title>
     {% endif %}
@@ -39,6 +39,7 @@
   <div id="wrap">
     <!-- Navbar header -->
     {% include header.html %}
+    {% include sidebar.html %}
 
     {{ content }}
 
@@ -55,5 +56,6 @@
     <script src="{{ site.baseurl }}static/js/main.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ site.baseurl }}static/js/ie10-viewport-bug-workaround.js"></script>
+  {% include js.html %}
   </body>
 </html>

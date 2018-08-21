@@ -5,6 +5,7 @@ tags:
  - Clojure
  - Incanter
  - Data Science
+ - Misc
 ---
 
 Incanter doesn't have a built in way to add an additional Y-axis.

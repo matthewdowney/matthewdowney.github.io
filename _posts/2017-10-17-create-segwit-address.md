@@ -1,8 +1,9 @@
 ---
 layout: post
-title: How to Generate a SegWit Bitcoin Address (P2WPKH-P2SH) with Python
+title: Generating a P2WPKH-P2SH (SegWit) Bitcoin Address (Python)
 tags:
 - Bitcoin
+- Python
 - Crypto
 - Software
 ---

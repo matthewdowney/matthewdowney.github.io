@@ -1,0 +1,37 @@
+<style>
+.sidebar {
+	position: fixed;
+	z-index: 10;
+	max-width: 300px;
+}
+.sidebar h3 {
+	font-size: 14px;
+}
+.sidebar .avatar img {
+	width: 70%;
+}
+.sidebar .social {
+	padding-top: 35px;
+}
+@media screen and (max-width: 1350px) {
+    .sidebar {
+        position: relative;
+	max-width: 100%;
+    }
+    .sidebar .container {
+	display: block;
+    }
+    .sidebar .social {
+	padding-top: 0;
+    }
+    .sidebar .avatar img {
+	width: 20%;
+    }
+    .detail {
+	display: none;
+    }
+}
+.hidden {
+    display: none;
+}
+</style>

@@ -1,51 +1,41 @@
 ---
 layout: post
-title: Proposal for Cryptographic KYC
+title: Cryptographic KYC
 tags:
 - Cryptography
 - Banking
+- Essays
 ---
+Basic cryptography is more than capable of improving today's KYC processes.
 
-Quite a lot of KYC could be handled faster & safer if we could prove something _not_ to be true.
+In fact, KYC could be handled both faster and safer if we could prove something _not_ to be true (see [Type I/II Errors](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors)). Today, KYC involves aggregating user data in a central database, like [World-Check](https://risk.thomsonreuters.com/en/products/world-check-know-your-customer.html); subscribing various businesses to such a data provider; and querying the database to see if a potential customer is listed.
 
-Right now KYC involves 
+The centralization of such a database presents several concerns. User data is vulnerable to compromise in a breach (see [Equifax](https://www.ftc.gov/equifax-data-breach) on centralized data storage), multiple KYC providers expend (read: waste) effort to cover the same demographics, and  businesses wishing to do KYC screening are beholden to the data providers' APIs.
 
-1. aggregating user data in a central database, like [World-Check](https://risk.thomsonreuters.com/en/products/world-check-know-your-customer.html);
-2. subscribing to a data provider; and
-3. querying the database to see if a potential customer is listed.
+What if we used a bloom filter whose elements are the `full name || birthday || SSN` of each individual in an existing database who has a Government Approved Demerit™?
 
-Point 1 presents several concerns.
-
-- User data can be compromised in a breach;
-- multiple KYC providers expend (read: waste) effort to cover the same demographics;
-- businesses wishing to do KYC screening are beholden to the data providers' APIs.
-
-## Bloom Filter
-
-What if we used a bloom filter whose elements are the `full name + birthday` of each individual in an existing database who has some form of demerit?
-To store an offender registry the size of the United States, [you'd require < 1GB of space with `p = 0.00001` of a false positive](https://hur.st/bloomfilter?n=323000000&p=0.00001) given 17 hashing functions.
-
-Benefits include that
+To store an offender registry the size of the United States, [you'd require < 1GB of space with `p = 0.00001` of a false positive](https://hur.st/bloomfilter?n=323000000&p=0.00001) given 17 hashing functions. Benefits include that
 
 - in the event of a breach, no user data would be compromised;
 - data can therefore be distributed via technology like [IPFS](https://ipfs.io/) or [Holochain](https://github.com/metacurrency/holochain), rather than siloed; and
-- KYC providers focus on looking into legitimately suspicious activity (better signal to noise ratio).
+- KYC providers are incentivized to focus on cataloging legitimately suspicious activity (better signal to noise ratio).
 
-When there's a no positive match for a prospective customer, he can be onboarded right away. 
+When there's a no positive match for a prospective customer, she can be onboarded right away. *There is no possibility of a false negative.*
 
-When there is a match, the KYC provider determined to have uploaded 
-hashed data to the (hopefully distrubted) file store can be engaged to continue the investigation. Onboarding becomes easier for everyone.
+When there is a match, the KYC provider determined to have uploaded hashed data to the (distrubted) file store is engaged to continue the investigation. This is presumably better for KYC providers because they are engaged only in labor intensive—i.e. billable—cases.
 
-## Boolean Tests
+Since the cost of storing data is so low, there's no need to have a vague "wrong-doers" database; we can create different file stores by offense (and still maintain user privacy). There could be several databases checking for traits like politically exposed personhood, record of money laundering, or civil suits.
 
-Since the cost of storing data is so low, there's no need to have a vague "wrong-doers" database; we can create different file stores by offense (and still maintain user privacy).
-There could be several databases (bloom filters) checking for traits like politically exposed personhood or a history of money laundering.
+The system described so far falls short in that it creates a perverse incentive for KYC providers and doesn't guarantee user privacy. Both can be solved with a single modification.
 
-## Increasing Security & Monetizing
+The perverse incentive for KYC providers is simple: they have no power to monetize negative matches and might thus decide to inject false positives into the filter (by adding random 1-bits). At the same time, user privacy is gone once a snooper knows their name, birthday, and ssn. 
 
-The system described so far falls short in two ways
+Both issues are mitigated by modifying the preimage of the hash entered into the bloom filters with a KYC provider's secret key. To upload some user to a bloom filter database, the KYC provider would take 
 
-1. KYC providers have no power to monetize the information they provide. They are only paid when a positive match is detected and their services are required. As well as being unfortunate for them, this creates an incentive to synthetically increase the false positive rate (by adding random 1-bits).
-2. While user security is in tact in the sense that a download of the database doesn't allow one to print a list of users suspected of some wrong doing, there's nothing to stop an observer from checking up on an individual user, given her name & birthday.
+```haskell
+preimage = HMAC(first name || last name || birthday, secret key)
+``` 
 
-We can solve both of these problems by modifying the preimage of the hash entered into the bloom filters with a KYC provider's secret key. To upload some user to a bloom filter database, the KYC provider would take `preimage = HMAC(first name || last name || birthday, secret key)` and then enter `preimage` into the bloom filter. To query the data, a business would hit the KYC provider's API with `first name || last name || birthday` (presumably for some cost) and receive the `preimage`. The business would then use the `preimage` to search the database.
+and then enter `preimage` into the bloom filter. To query the data, a business would hit the KYC provider's API with `first name || last name || birthday` (presumably for some small cost) and receive the `preimage`. The business would then use the `preimage` to search the database. It's obvious how this protects user privacy.
+
+Should the KYC provider wish to perform a false positive injection, client businesses would discover the fraud by comparing the algorithmic false positive probability with their experienced rate of false positives.

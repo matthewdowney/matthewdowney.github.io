@@ -4,7 +4,7 @@ title: Note on Signing Ethereum Transactions on Ledger Nano S with ethereumjs-tx
 tags:
 - Ethereum
 - Crypto
-- Software
+- Misc
 ---
 
 I ran into some problems with [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) when attempting to make use of [Ledger's Node API](https://github.com/LedgerHQ/ledger-node-js-api) for transaction signing. The Ledger API is pretty straightforward: it takes a BIP32 key path & a hex serialized transaction, and returns the signature data for the transaction.

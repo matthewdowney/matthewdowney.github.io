@@ -3,6 +3,7 @@ layout: post
 title: Clojure REPL Automatically Loading Project Namespaces
 tags:
  - Clojure
+ - Misc
 ---
 
 If you're working on a Clojure project with several namespaces, you might find it useful to

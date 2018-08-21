@@ -3,7 +3,7 @@ layout: post
 title: Modify a form in the Django admin panel based on the request
 tags:
 - Django
-- Software
+- Misc
 ---
 
 Sometimes it's tricky to customize the Django admin site. This particular issue plagued me for a good hour, and I wasn't able to find a solution online.

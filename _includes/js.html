@@ -1,0 +1,16 @@
+<script type="text/javascript">
+$(window).scroll(function(){ 
+		var pos = $(window).scrollTop();
+		if(pos > 10) {
+			$(".sidebar").css({
+				opacity: 0.7
+			});
+			$(".detail").addClass("hidden");
+		} else {
+			$(".detail").removeClass("hidden");
+			$(".sidebar").css({
+				opacity: 1
+			});
+		}
+});
+</script>

@@ -1,19 +1,79 @@
 ---
-layout: home
+layout: layout
+title: Home
 ---
-
-<section id="about">
-    <div class="container">
-      <div class="avatar">
-        <img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Profile image">
-      </div>
-      <h3>I'm {{ site.author }}.</h3>
-      <h3>Engineer, bitcoiner & crypto enthusiast, and <a href="https://www.youtube.com/watch?v=sfN0Hly0U28">parkour practitioner</a>.
-      <h3>Contact me by <a href="mailto:{{ site.email }}">email</a>.</h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      {% include social.html %}
+{% include sidebar-css-center.html %}
+<div class="container" style="max-width: 1600px">
+  <div class="row">
+    <div class="col-lg-4 col-md-12">
+       <h3>Software</h3>
+		  <div class="panel panel-default">
+			<div class="panel-body">
+				{% for post in site.posts %}
+					{% if post.tags contains "Software" %}
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4 post-date">
+								 <h5 style="text-align: right">
+									{{ post.date | date: "%B %e, %Y" }}
+								 </h5>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8 post-title">
+								 <h5 style="text-align: left">
+									 <strong><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong>
+								 </h5>
+							 </div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		  </div>
     </div>
-</section>
+    <div class="col-lg-4 col-md-12">
+       <h3>Essays</h3>
+		  <div class="panel panel-default">
+			<div class="panel-body">
+				{% for post in site.posts %}
+					{% if post.tags contains "Essays" %}
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4 post-date">
+								 <h5 style="text-align: right">
+									{{ post.date | date: "%B %e, %Y" }}
+								 </h5>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8 post-title">
+								 <h5 style="text-align: left">
+									 <strong><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong>
+								 </h5>
+							 </div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		  </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+       <h3>Miscellanea</h3>
+		  <div class="panel panel-default">
+			<div class="panel-body">
+				{% for post in site.posts %}
+					{% if post.tags contains "Misc" %}
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4 post-date">
+								 <h5 style="text-align: right">
+									{{ post.date | date: "%B %e, %Y" }}
+								 </h5>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8 post-title">
+								 <h5 style="text-align: left">
+									 <strong><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong>
+								 </h5>
+							 </div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		  </div>
+    </div>
+  </div>
+
+</div>

@@ -5,7 +5,7 @@ tags:
 - Bitcoin
 - Ethereum
 - Crypto
-- Software
+- Misc
 ---
 
 # Define: xpub

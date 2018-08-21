@@ -127,6 +127,12 @@ span.where {
 .container a:hover {
   color: $color-main-dark;
 }
+p > img {
+ max-width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+}
 .img-responsive {
  display: block;
  height: auto;
@@ -192,6 +198,19 @@ span.where {
   line-height: 30px;
   font-size: 18px;
 }
+
+.blogpost p {
+  margin: 0 0 25px;
+}
+
+.post-date > h5 {
+ font-size: 12px;
+}
+
+.post-title > h5 {
+ font-size: 14px;
+}
+
 
 /* Footer 
 -------------------------------------------------- */
