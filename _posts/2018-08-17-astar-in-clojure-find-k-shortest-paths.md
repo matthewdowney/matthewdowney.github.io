@@ -95,11 +95,11 @@ Translating to Clojure, we get:
 (defn unseen? [path node]
   (not-any? #{node} path))
 
-(defn step-factory [parent cost heur dest]
+(defn step-factory [parent last-insertion cost heur dest]
   (fn [insertion-idx node]
     {:parent parent
      :node node
-     :entered (+ (:entered parent) (inc insertion-idx))
+     :entered (+ last-insertion (inc insertion-idx))
      :cost (+ (:cost parent) (cost (:node parent) node) (heur node dest))}))
 
 (defn next-a*-path [graph dest adjacent f-cost f-heur]
@@ -108,7 +108,8 @@ Translating to Clojure, we get:
           adjacent' (disj adjacent current)] ;; "pop" the current node
       (if (= node dest)
         [(reverse path), adjacent']
-        (let [factory (step-factory current f-cost f-heur dest)
+        (let [last-idx (or (:entered (last adjacent')) 0)
+              factory (step-factory current last-idx f-cost f-heur dest)
               xform (comp (filter (partial unseen? path)) (map-indexed factory))
               adjacent'' (into adjacent' xform (get graph node))]
           (recur graph dest adjacent'' f-cost f-heur))))))
@@ -142,7 +143,8 @@ To make something useful of this, we iterate calls to this function lazily. The 
           adjacent' (disj adjacent current)] ;; "pop" the current node
       (if (= node dest)
         [(reverse path), adjacent']
-        (let [factory (step-factory current f-cost f-heur dest)
+        (let [last-idx (or (:entered (last adjacent')) 0)
+              factory (step-factory current last-idx f-cost f-heur dest)
               xform (comp (filter (partial unseen? path)) (map-indexed factory))
               adjacent'' (into adjacent' xform (get graph node))]
           (recur graph dest adjacent'' f-cost f-heur))))))
@@ -150,13 +152,12 @@ To make something useful of this, we iterate calls to this function lazily. The 
 (defn unseen? [path node]
   (not-any? #{node} path))
 
-(defn step-factory [parent cost heur dest]
+(defn step-factory [parent last-insertion cost heur dest]
   (fn [insertion-idx node]
     {:parent parent
      :node node
-     :entered (+ (:entered parent) (inc insertion-idx))
+     :entered (+ last-insertion (inc insertion-idx))
      :cost (+ (:cost parent) (cost (:node parent) node) (heur node dest))}))
-
 
 (defn rpath [{:keys [node parent]}]
   (lazy-seq
