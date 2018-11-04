@@ -34,7 +34,7 @@ Naive Approaches
         (map #(.get %) reqs)))))
 ```
 
-These snippets are intuitively recognizable as not optimal—after all, lots of smart people have worked hard to make sure the NIC can handle network traffic and iterrupt the CPU when the data are ready, one thread is more than capable of managing many recv buffers. 
+These snippets are intuitively recognizable as not optimal—after all, lots of smart people have worked hard to make sure the NIC can handle network traffic and interrupt the CPU when the data are ready; one thread is more than capable of managing many recv buffers. 
 
 But clear, if not performance optimal approaches, are often better than code designed to extract the maximum performance out of the machine, and my pre-Clojure experience conditioned me to expect the standard library to leave me on my own when it came to NIO. I was pleasantly surprised to find an idiomatic solution in Clojure that was even more concise than my thread-pool version of do-requests, largely in thanks to Clojure's way of thinking about concurrency.
 
