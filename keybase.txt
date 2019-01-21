@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/matthewdowney
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://matthewdowney.github.io
+  * I am matthewdowney (https://keybase.io/matthewdowney) on keybase.
+  * I have a public key ASA5-6Rf3lYjOJowTXj54xl2nhKdjc1jvET1YsVd4Q0YcQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012039fba45fde5623389a304d78f9e319769e129d8dcd63bc44f562c55de10d18710a",
+      "host": "keybase.io",
+      "kid": "012039fba45fde5623389a304d78f9e319769e129d8dcd63bc44f562c55de10d18710a",
+      "uid": "79a41e462aff1acc7d6c22bd4409a919",
+      "username": "matthewdowney"
+    },
+    "merkle_root": {
+      "ctime": 1548099765,
+      "hash": "26bd01c46350382068ac8c399da321e767d2bf054bd13fba109b94366412e02f2c558284c5f796065685f16f95536ee727359ce9bc011bf71a5b9c69229b3c6a",
+      "hash_meta": "e2cc2c6398f62e3de3010395e20f53142fd3254df5a9d7f7efc95130c05c02b1",
+      "seqno": 4516372
+    },
+    "service": {
+      "entropy": "pejDidodnHgbqARGgWwn+4qM",
+      "hostname": "matthewdowney.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.13.1"
+  },
+  "ctime": 1548099773,
+  "expire_in": 504576000,
+  "prev": "a244f8ad988fc3e82fb498194c4c61550a9b3a6706b49d457ec2078ca87dba66",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgOfukX95WIziaME14+eMZdp4SnY3NY7xE9WLFXeENGHEKp3BheWxvYWTESpcCBsQgokT4rZiPw+gvtJgZTExhVQqbOmcGtJ1FfsIHjKh9umbEIHe/nUP9/Y8/Az72WUQlnpT063iiNaR6H+LQuKcs9AXRAgHCo3NpZ8RA2YvHqraDPlCg9iVMbXRpIs2PouClmJv6m9mboyG9Ng3rK5qGHQXg9/H0G/MjNZoMzdk+f/oaiS3+IuLQktF6CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIL2X06uswpgX7y1nxjCDtCnn5Lg7V7ajQxuctxO7rduvo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/matthewdowney
+
+==================================================================
