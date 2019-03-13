@@ -65,8 +65,6 @@ It's an abstraction that's largely missing from languages that prefer a lower le
 
 However, the concurrency models in languages like Go, F#, and Clojure recognize that the fundamental work unit in a program ought to be a code block, rather than a thread. This opens the door to automatic yielding semantics—largely ignorable by the programmer—that optimize for CPU utilization by allowing pieces of code running blocking or IO bound operations to relinquish use of the CPU until they become unblocked.
 
-(Node.js chose a third, callback-based alternative to this apparent dichotomy. The language designers did a great job given the situation they were in—expecting JS developers to suddenly learn how multithreaded programming works was almost as implausible as writing a single-threaded server—and this pressure spurred them to develop a paradigm that is performant and almost impossible to misuse because there are no blocking operations. This came at the cost of code quality, but that ship had sailed with respect to JS anyway.)
-
 Crashing Your System
 ===
 
