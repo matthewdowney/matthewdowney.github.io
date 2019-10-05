@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A* in Clojure to Find k Shortest Paths
+title: A* in Clojure to Lazily Find the Shortest Paths
 tags:
  - Clojure
  - Algorithms

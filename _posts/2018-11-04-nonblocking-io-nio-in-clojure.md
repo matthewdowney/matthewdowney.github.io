@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Asynchronous (NIO) HTTP workflows in Clojure
+title: Asynchronous (NIO) HTTP Workflows in Clojure
 tags:
  - Clojure
  - Software

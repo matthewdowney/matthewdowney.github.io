@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Defeating Java Setters with Clojure
+title: Clojure-Java Interop Pattern for Avoiding Setters
 tags:
  - Clojure
  - Java
@@ -102,3 +102,30 @@ was the first thing I looked at when figuring out how to generate the setter cod
     `(fn [~t ~@args]
        (. ~t (~name ~@args)))))
 ```
+
+
+### Update
+
+The excel generation code is now on github at [excel-clj](https://github.com/matthewdowney/excel-clj). You
+can see the setter-avoiding code in acction (and build a styled excel spreadsheet) with the following
+snippet:
+
+```clojure
+(require '[excel-clj.core :as excel])
+
+(def table-data
+  [{"Date" "2018-01-01" "% Return" 0.05M "USD" 1500.5005M}
+   {"Date" "2018-02-01" "% Return" 0.04M "USD" 1300.20M}
+   {"Date" "2018-03-01" "% Return" 0.07M "USD" 2100.66666666M}])
+
+(letfn [(highlight-below-5% [row-data col-name]
+          (when (< (row-data "% Return") 0.05M)
+            {:fill-pattern :solid-foreground
+             :fill-foreground-color :yellow}))]
+  (excel/quick-open
+    {"My Generated Sheet" (excel/table table-data :data-style highlight-below-5%)}))
+```
+
+Which produces
+
+![an excel sheet with a highlighted row](https://github.com/matthewdowney/excel-clj/blob/master/resources/manual-formatting.png?raw=true)
