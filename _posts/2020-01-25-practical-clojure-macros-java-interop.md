@@ -104,8 +104,8 @@ Clojure uses for futures decides when to create new threads, when to recycle
 cached ones, etc.)
 
 If you want to guarantee maximum possible concurrency, you can use the Java 
-standard library's CountDownLatch oblige each thread to wait for the others to 
-have started before starting.
+standard library's CountDownLatch to oblige each thread to wait for the others 
+to have started before starting.
 
 ```clojure
 (import java.util.concurrent.CountDownLatch)
