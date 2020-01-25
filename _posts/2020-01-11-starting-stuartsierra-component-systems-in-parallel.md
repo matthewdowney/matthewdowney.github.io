@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Starting stuartsierra/component Systems in Parallel
+title: Starting stuartsierra/component in Parallel
 tags:
  - Clojure
  - Software

@@ -1,5 +1,5 @@
 # top level stuff you probably don't need to touch
-#highlighter: pygments
+highlighter: pygments
 markdown: rdiscount
 rdiscount:
   extensions: [smart]
@@ -29,5 +29,5 @@ syntax-highlighting:
     css: syntax.css
     #css: solarized-light.css
 
-plugins:
+plugins_dir:
   - jekyll-seo-tag
