@@ -6,9 +6,10 @@ tags:
  - Software
 ---
 
-There's no lack of resources when it comes to library interoperability between 
-the various JVM languages, so instead I want to share a few ways that it's 
-useful interact with the JVM — even from "pure Clojure" code. 
+I've found no lack of resources when it comes to library interoperability between 
+the various JVM languages, so instead I want to share a few ways that I've found
+it useful interact with the JVM & the Java standard library when writing pure 
+Clojure code.
 
 These are the macros I use to 
 
@@ -181,14 +182,14 @@ dereferences it computes its own value.
     (java.text.SimpleDateFormat. "yyyy-MM-dd")))
 
 (defn ymd-fmt [^java.util.Date date]
-  (.format @sdf date))
+  (.format @sdf date)) ;; <-- Just make sure to dereference it 
 
 (ymd-format (java.util.Date.))
 ;=> "2020-01-25"
 ```
 
 > Luckily [clj-time](https://github.com/clj-time/clj-time) exists as a much 
-  better alternative to this particular case.
+  better alternative for this particular situation.
 
 
 ## <a name="setters"></a> Setters
@@ -227,10 +228,14 @@ the corresponding setters:
 (defmacro setters
   [obj attrs]
   (assert (map? attrs) "Compile-time map literal")
-  
   (let [capitalize (fn [coll] (map string/capitalize coll))
-        camel-case (fn [kw] (-> (name kw) (string/split #"\W") capitalize string/join))
-        setter-sym (fn [kw] (->> (camel-case kw) (str ".set") symbol))
+        camel-case (fn [kw] (-> (name kw) 
+	                        (string/split #"\W") 
+				capitalize 
+				string/join))
+        setter-sym (fn [kw] (->> (camel-case kw) 
+	                         (str ".set") 
+				 symbol))
         expanded (map (fn [[a val]]
                         (if (vector? val)
                           `( ~(setter-sym a) ~@val)
@@ -238,11 +243,12 @@ the corresponding setters:
                       attrs)]
     `(doto obj# ~@expanded)))
 
-   
-(setters font-object {:bold true 
-                      :font-name "arial"
-                      :font-height-in-points 14 
-                      :font ["large" "red"]})
+(setters 
+  font-object 
+  {:bold true 
+   :font-name "arial"
+   :font-height-in-points 14 
+   :font ["large" "red"]})
 ```
 
 > For anyone interested, you can do something similar with nested objects — 
