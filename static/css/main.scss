@@ -128,8 +128,12 @@ span.where {
 .container .text-muted {
   margin: 20px 0;
 }
+
+a.blog-title {
+  color: $color-main-dark !important;
+}
 .container a {
-  color: $color-main;
+  color: #345f8aab;
 }
 .container a:hover {
   color: $color-main-dark;
