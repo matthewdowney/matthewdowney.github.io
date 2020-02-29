@@ -135,6 +135,9 @@ a.blog-title {
 .container a {
   color: #345f8aab;
 }
+a.mainlink {
+  color: $color-main-dark;
+}
 .container a:hover {
   color: $color-main-dark;
 }
