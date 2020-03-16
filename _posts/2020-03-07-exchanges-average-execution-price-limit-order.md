@@ -2,10 +2,8 @@
 layout: post
 title: Exchanges, How Do You Feel About an Average Execution Price Limit Order?
 tags:
- - Finance
- - Market Microstructure
- - Exchanges
  - Trading
+ - Market structure
 ---
 
 A decidedly contrarian friend posed the question, about the protagonists of 

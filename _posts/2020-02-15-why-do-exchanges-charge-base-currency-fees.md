@@ -3,7 +3,7 @@ layout: post
 title: Why do Exchanges Charge Base Currency Fees?
 tags:
  - Trading
- - Markets
+ - Market structure
 ---
 
 Some [prominent](https://www.binance.com/) cryptocurrency 
