@@ -85,7 +85,7 @@ BitMEX), unrealized P&L is not counted toward the cross margin collateralizing
 other open positions.
 
 It's possible that many of the open long positions — at varying levels of 
-leverage — for the USD settled BTC futures were used to fabricate dollars in the 
+leverage — in the USD quoted BTC futures were used to fabricate dollars in the 
 same way that short positions are used to create crypto. Prudent traders seeking
 to mitigate their risk of liquidation would have reduced or closed their open 
 positions, thereby removing dollars from the order book as well.
