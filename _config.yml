@@ -18,7 +18,6 @@ email: mjdowney@protonmail.ch
 github: matthewdowney
 instagram: _matthewdowney
 disqus: matthewdowney-github-io
-google_analytics: UA-69391421-1
 
 # needed for travis-ci build
 exclude: [vendor]
