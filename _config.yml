@@ -5,14 +5,16 @@ rdiscount:
   extensions: [smart]
 permalink: /:title.html
 paginate: 5
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - jekyll-feed
 port: 3000
 safe: true
 url: https://matthewdowney.github.io
 #baseurl: /
 title: Matthew Downey
 author: Matthew Downey
-description: Personal website
+description: Clojure, crypto, and algorithmic finance.
 avatar: profile.jpg
 email: mjdowney@protonmail.ch
 github: matthewdowney
@@ -30,3 +32,4 @@ syntax-highlighting:
 
 plugins_dir:
   - jekyll-seo-tag
+  - jekyll-feed
