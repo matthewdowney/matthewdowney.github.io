@@ -5,7 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <meta name="author" content="{{ site.author }}" />
-    <meta name="description" content="{{ site.description }}">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"> 
+    {% if page.image %}
+      <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    {% else %}
+      <meta property="og:image" content="{{ site.baseurl }}static/img/{{ site.avatar }}" />
+    {% endif %}
+    {% if page.date %}
+      <meta property="article:published_time" content="{{ page.date }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:card" content="summary">
+
     <link rel="favicon" href="{{ site.baseurl }}static/img/favicon.ico">
     <link rel="alternate" type="application/atom+xml" title="{{site.author}}'s Blog" href="/feed.xml">
 
