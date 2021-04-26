@@ -1,6 +1,6 @@
 # top level stuff you probably don't need to touch
 highlighter: pygments
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions: [smart]
 permalink: /:title.html
@@ -14,7 +14,7 @@ url: https://matthewdowney.github.io
 #baseurl: /
 title: Matthew Downey
 author: Matthew Downey
-description: Finance, cryptography, and software (mostly Clojure ATM).
+description: Finance, cryptography, and software (mostly Clojure currently).
 avatar: profile.jpg
 email: mjdowney@protonmail.ch
 github: matthewdowney
